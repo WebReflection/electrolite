@@ -42,7 +42,7 @@ app.once('ready', function () {
   ;
 
   new BrowserWindow({
-    x: x, y: y,
+    x: x, y: y - (process.platform === 'linux' ? 38 : 0),
     width: width, height: height,
     title: info.hostname,
     icon: path.join(__dirname, 'icon', (
